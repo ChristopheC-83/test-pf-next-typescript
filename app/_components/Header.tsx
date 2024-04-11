@@ -59,20 +59,17 @@ export default function Header() {
             </Link>
           ))}
         </ul>
-        <ul className="flex gap-x-5">
+        <ul className="flex gap-x-3">
           {socialLinks.map((socialLink) => (
             <Link
               key={socialLink.id}
               href={socialLink.url}
-              className="size-6 p-0 hover:text-primary"
+              className="size-9 p-0 hover:text-primary scale-90"
             >
               {socialLink.icon}
             </Link>
           ))}
         </ul>
-      </Section>
-      <Section className="flex justify-end py-12 px-1">
-        <h1 className="text-2xl font-bold text-center ">Christophe C.</h1>
       </Section>
     </header>
   );
