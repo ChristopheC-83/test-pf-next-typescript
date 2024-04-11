@@ -55,7 +55,7 @@ export default function Header() {
               href={navLink.url}
               className="text-xl font-bold hover:text-primary"
             >
-              {navLink.name}
+              <p>{navLink.name}</p>
             </Link>
           ))}
         </ul>
