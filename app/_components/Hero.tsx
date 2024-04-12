@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
 import Section from "./Section";
@@ -13,20 +14,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function Hero() {
-  const [technos, setTechnos] = useState(false);
+  const [technos, setTechnos] = useState<boolean>(false);
 
   return (
-    <Section className="flex flex-col-reverse sm:flex-row  items-top">
+    <Section className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-top">
       <div className="flex-[2] flex flex-col h-fit py-4">
         <h2 className="text-4xl font-bold text-center  mb-auto">
           Christophe C.
         </h2>
-        <h3 className=" text-2xl flex-1 flex items-center py-4">
+        <h3 className=" text-2xl flex-1 flex items-center py-6">
           Développeur Web et Mobile
         </h3>
-        <p className="text-xl mb-2">
-          Je réalise vos projets de développement web et mobile, de la
-          conception à la mise en ligne. Les dernières technologies sont
+        <p className="text-xl mb-4">
+          Je réalise vos projets de site internet ou d'outils web, de la
+          conception à la mise en ligne. <br /><br /> Les dernières technologies sont
           utilisées pour vous garantir un produit de qualité.
         </p>
         <div
@@ -42,9 +43,9 @@ export default function Hero() {
             <motion.div
               animate={{ y: 0, opacity: 1 }}
               initial={{ y: -50, opacity: 0 }}
-              className="border bg-muted-foreground border-primary-foreground border-opacity-20 p-4 rounded-xl mt-4 text-white"
+              className="border bg-card border-neutral-500 p-4 rounded-xl mt-4 text-card-foreground"
             >
-              <p className="text-xl mb-2">
+              <p className="text-lg mb-4">
                 <Badge variant="tertiary">
                   <SiNextdotjs className="text-neutral-50 mr-1  text-lg" />
                   Nextjs
@@ -56,14 +57,14 @@ export default function Hero() {
                 </Badge>
                 sont évidemment dans ma boîte à outils.
               </p>
-              <p className="text-xl mb-2">
+              <p className="text-lg mb-4">
                 <Badge variant="tertiary">
                   <SiTypescript className="text-blue-500 mr-1 text-lg" />
                   Typescript
                 </Badge>
                 sécurise mes développements.
               </p>
-              <p className="text-xl mb-2">
+              <p className="text-lg mb-4">
                 <Badge variant="tertiary">
                   <LiaPhp className="text-blue-500 mr-1 text-lg" />
                   Php
@@ -75,7 +76,7 @@ export default function Hero() {
                 </Badge>
                 permettent une administration simple de vos données.
               </p>
-              <p className="text-xl mb-2">
+              <p className="text-lg mb-4">
                 <Badge variant="tertiary">
                   <SiTailwindcss className="text-blue-500 mr-1 text-lg" />
                   Tailwind
@@ -99,7 +100,7 @@ export default function Hero() {
           )}
         </AnimatePresence>
       </div>
-      <div className="flex-1 flex justify-end">
+      <div className="flex-1 flex justify-center md:justify-end min-w-[250px] min-h-[250px]">
         <Image
           width={200}
           height={200}

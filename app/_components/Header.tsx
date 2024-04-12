@@ -1,13 +1,14 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+
 import Section from "./Section";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { RiTwitterXLine } from "react-icons/ri";
+import { navLinks } from "@/customTypes/navLinks";
+import { socialLinks } from "@/customTypes/socialLinks";
 
 export default function Header() {
-  const navLinks = [
+  const navLinks: navLinks[] = [
     {
       id: 1,
       name: "Accueil",
@@ -24,7 +25,7 @@ export default function Header() {
       url: "/blog",
     },
   ];
-  const socialLinks = [
+  const socialLinks:socialLinks[] = [
     {
       id: 1,
       name: "Github",
@@ -46,7 +47,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 py-4">
+    <header className="sticky top-0 py-4 bg-background">
       <Section className="flex items-center justify-between">
         <ul className="flex gap-x-5">
           {navLinks.map((navLink) => (
